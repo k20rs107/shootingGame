@@ -10,10 +10,19 @@
   <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/keys.js"></script>
   <style>
 
   </style>
   <script>
+
+    //初期化
+    var ncmb = new NCMB(appKey, clientKey);
+    //データベースの指定
+    var SGame = ncmb.DataStore("shooting");
+    //アクセス用のインターフェイス
+    var sgame = new SGame();
+    var key = "score";
     
     function rgbToColor(r,g,b){
         return "#" + hex02(r)+hex02(g)+hex02(b);
